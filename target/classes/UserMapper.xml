@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="it.enterprise.foundation.demoMyBatis.mappers.UserMapper">
+    <resultMap type="Utente" id="UtenteResult">
+        <id property="id" column="id" />
+        <result property="nome" column="name" />
+        <result property="cognome" column="lastname" />
+        <result property="eta" column="age" />
+        <result property="dataDiNascita" column="born_date" />   
+    </resultMap>
+    
+       <select id="getAll" resultMap="UtenteResult">
+        SELECT * FROM User
+    </select>
+</mapper>
